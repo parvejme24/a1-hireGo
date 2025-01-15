@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
     <script>
       tailwind.config = {
         theme: {
@@ -24,8 +29,12 @@
         <h2 class="text-3xl font-bold">HireGo</h2>
 
         <!-- Hamburger Menu for Mobile -->
-        <button id="menu-btn" class="lg:hidden text-3xl focus:outline-none">
-          ☰
+        <button
+          id="menu-btn"
+          class="lg:hidden text-3xl focus:outline-none"
+          aria-label="Open Menu"
+        >
+          <i class="fas fa-bars"></i>
         </button>
 
         <!-- Nav Items -->
@@ -84,15 +93,76 @@
     </nav>
     <!-- Navbar End -->
 
+    <!-- Hero Section Start -->
+    <div class="bg-[#B1D8FC] rounded-bl-[50px]">
+      <div
+        class="container mx-auto px-4 lg:px-10 py-12 grid grid-cols-1 md:grid-cols-2 items-center md:gap-10"
+      >
+        <div class="lg:text-left">
+          <h2 class="text-4xl font-bold mb-4">
+            HireGO is your all-in-one Global People Platform
+          </h2>
+          <p class="text-gray-600 flex items-center gap-2">
+            <i class="fas fa-check-circle text-green-500"></i>
+            G3's Leader in global employment platforms
+          </p>
+          <p class="text-gray-600 flex items-center gap-2">
+            <i class="fas fa-check-circle text-green-500"></i>
+            90% customer satisfaction rate
+          </p>
+
+          <button
+            class="bg-black text-white px-6 py-2 rounded-full font-bold mt-6"
+          >
+            Request a demo <i class="fa-solid fa-greater-than"></i>
+          </button>
+        </div>
+
+        <!-- hero images  -->
+        <div class="mt-10 md:mt-0">
+          <img src="./images/hero.png" alt="" />
+        </div>
+      </div>
+    </div>
+    <!-- Hero Section End -->
+
+    <!-- start brands section  -->
+    <div>
+      <div class="container mx-auto px-5 md:px-0 py-20">
+        <h2 class="text-[#8C8C8C] text-center text-2xl md:text-4xl font-bold">
+          Trusted by <span class="text-black">25,000+</span> companies from
+          startups to enterprise
+        </h2>
+
+        <div
+          class="pt-14 grid grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-10 items-center"
+        >
+          <img src="./images/brands/b1.png" alt="" class="mx-auto" />
+          <img src="./images/brands/b2.png" alt="" class="mx-auto" />
+          <img src="./images/brands/b3.png" alt="" class="mx-auto" />
+          <img src="./images/brands/b4.png" alt="" class="mx-auto" />
+          <img src="./images/brands/b5.png" alt="" class="mx-auto" />
+          <img src="./images/brands/b6.png" alt="" class="mx-auto" />
+          <img src="./images/brands/b7.png" alt="" class="mx-auto" />
+          <img src="./images/brands/b8.png" alt="" class="mx-auto" />
+          <img src="./images/brands/b9.png" alt="" class="mx-auto" />
+          <img src="./images/brands/b10.png" alt="" class="mx-auto" />
+          <img src="./images/brands/b11.png" alt="" class="mx-auto" />
+          <img src="./images/brands/b12.png" alt="" class="mx-auto" />
+          <img src="./images/brands/b13.png" alt="" class="mx-auto" />
+          <img src="./images/brands/b14.png" alt="" class="mx-auto" />
+        </div>
+      </div>
+    </div>
+    <!-- end brands section  -->
+
     <!-- JavaScript for Menu Toggle -->
     <script>
       const menuBtn = document.getElementById("menu-btn");
-      const menu = document.getElementById("menu");
-      const mobileMenu = document.getElementById("mobile-menu");
+      const menu = document.getElementById("mobile-menu");
 
       menuBtn.addEventListener("click", () => {
-        mobileMenu.classList.toggle("hidden");
-        menuBtn.classList.toggle("text-clifford");
+        menu.classList.toggle("hidden");
       });
     </script>
   </body>
